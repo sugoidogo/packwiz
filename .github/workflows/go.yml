@@ -28,8 +28,8 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Upload assets
-      uses: actions/upload-artifact@v4
+      uses: svenstaro/upload-release-action@v2
       with:
         tag: ${{ github.sha }}
         file_glob: true
-        file: dist/*/*.zip
+        file: dist/*.tar.gz
